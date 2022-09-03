@@ -6,10 +6,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 //reute to homepage
 app.get('/',(req, res) => {
-    res.sendFIle(__dirname + '/login.html');
+    res.sendFile(__dirname + '/login.html');
 });
 
-app.post('/login', (req, req) => {
+app.post('/login', (req, res) => {
     //Insert Login Code Here
     let username = req.body.username;
     let password = req.body.password;
